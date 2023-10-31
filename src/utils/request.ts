@@ -197,7 +197,7 @@ export function mapToQueryString(obj: object) {
     const query = [];
     for (let k in obj) {
         // @ts-ignore
-        query.push(`${k}=${obj[k]}`)
+        query.push(`${k}=${encodeURIComponent(obj[k])}`)
     }
     return query.join('&')
 }

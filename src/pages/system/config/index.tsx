@@ -47,7 +47,7 @@ export const BaiscConfigForm = defineComponent(
                         } else {
                             ElMessage.info(result.getMsg())
                         }
-                        emit('comfirm', result)
+                        emit('confirm', result)
                     })
             }).catch((err) => {
 
@@ -121,12 +121,13 @@ export const BaiscConfigForm = defineComponent(
                 </el-form-item>
             </el-form>
         }
+    },
+    {
+        name: "system-config-baisc-form",
+        props: ["data"],
+        emits: ['confirm', 'update:data']
     }
 )
-
-BaiscConfigForm.name = 'system-config-baisc-form'
-BaiscConfigForm.props = ['data']
-BaiscConfigForm.emits = ['confirm', 'update:data']
 
 
 // 邮箱配置表单
@@ -170,7 +171,7 @@ export const MailConfigForm = defineComponent(
                         } else {
                             ElMessage.info(result.getMsg())
                         }
-                        emit('comfirm', result)
+                        emit('confirm', result)
                     })
             }).catch((err) => {
 
@@ -257,12 +258,13 @@ export const MailConfigForm = defineComponent(
                 </el-form-item>
             </el-form>
         }
+    },
+    {
+        name: "system-config-mail-form",
+        props: ["data"],
+        emits: ['confirm', 'update:data']
     }
 )
-
-MailConfigForm.name = 'system-config-mail-form'
-MailConfigForm.props = ['data']
-MailConfigForm.emits = ['confirm', 'update:data']
 
 const SystemConfigPage = defineComponent(
     () => {
@@ -298,9 +300,10 @@ const SystemConfigPage = defineComponent(
                 </el-tabs>
             </div>
         }
+    },
+    {
+        name: "system-config",
     }
 )
-
-SystemConfigPage.name = 'system-config'
 
 export default SystemConfigPage

@@ -83,7 +83,7 @@ export const RoleForm = defineComponent(
                             } else {
                                 ElMessage.info(result.getMsg())
                             }
-                            emit('comfirm', result)
+                            emit('confirm', result)
                         })
                 } else {
                     api.add(state.value.formData as api.RoleFormRecord).then((result) => {
@@ -92,7 +92,7 @@ export const RoleForm = defineComponent(
                         } else {
                             ElMessage.info(result.getMsg())
                         }
-                        emit('comfirm', result)
+                        emit('confirm', result)
                     })
                 }
             }).catch((err) => {
@@ -218,13 +218,13 @@ export const RoleForm = defineComponent(
                 </el-form-item>
             </el-form>
         }
+    },
+    {
+        name: "role-form",
+        props: ["treeData", "data"],
+        emits: ["confirm", "update:data"]
     }
 )
-
-RoleForm.name = 'role-form'
-RoleForm.props = ['treeData', 'data']
-RoleForm.emits = ['confirm', 'update:data']
-
 
 const RolePage = defineComponent(
     () => {
@@ -540,7 +540,10 @@ const RolePage = defineComponent(
             </el-container>
         }
 
+    },
+    {
+        name: "user-role"
     }
 )
-RolePage.name = "user-role"
+
 export default RolePage

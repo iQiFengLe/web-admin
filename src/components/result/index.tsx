@@ -8,6 +8,7 @@ interface Props {
     desc?: string,
     state?: 'success' | 'error' | 'info' | 'warning' | string,
     extra?: string,
+    class?: string
 }
 
 const Result = defineComponent(
@@ -57,7 +58,7 @@ const Result = defineComponent(
     },
     {
         name: "Result",
-        props: ['title', 'desc', 'state', 'extra']
+        props: ['title', 'desc', 'state', 'extra', "class"]
     }
 )
 

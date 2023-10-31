@@ -425,7 +425,7 @@ const PermissionPage = defineComponent(
             return <div>
                 <PermissionFormPanel ref={(comp) => formPanelRef.value = comp as unknown as PermissionFormPanelInstance} />
 
-                <XPan keys={['index', 'json-view']} active={viewActive.value}>
+                <XPan active={viewActive.value}>
                     <div key="index">
                         <STable
                             ref={(comp) => tableRef.value = comp as unknown as STableInstance}
@@ -444,7 +444,10 @@ const PermissionPage = defineComponent(
             </div>
         }
 
+    },
+    {
+        name: "user-permission"
     }
 )
-PermissionPage.name = "user-permission"
+
 export default PermissionPage

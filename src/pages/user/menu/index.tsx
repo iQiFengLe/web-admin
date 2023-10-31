@@ -54,7 +54,7 @@ export const MenuForm = defineComponent(
                             } else {
                                 ElMessage.info(result.getMsg())
                             }
-                            emit('comfirm', result)
+                            emit('confirm', result)
                         })
                 } else {
                     api.add(formData.value as api.MenuFormRecord).then((result) => {
@@ -63,7 +63,7 @@ export const MenuForm = defineComponent(
                         } else {
                             ElMessage.info(result.getMsg())
                         }
-                        emit('comfirm', result)
+                        emit('confirm', result)
                     })
                 }
             }).catch((err) => {
@@ -211,13 +211,13 @@ export const MenuForm = defineComponent(
                 </el-form-item>
             </el-form>
         }
+    },
+    {
+        name: "menu-form",
+        props: ["treeData", "data"],
+        emits: ["confirm", "update:data"]
     }
 )
-
-MenuForm.name = 'menu-form'
-MenuForm.props = ['treeData', 'data']
-MenuForm.emits = ['confirm', 'update:data']
-
 
 const MenuPage = defineComponent(
     () => {
@@ -544,7 +544,9 @@ const MenuPage = defineComponent(
             </el-container>
         }
 
+    },
+    {
+        name: "user-menu"
     }
 )
-MenuPage.name = "user-menu"
 export default MenuPage

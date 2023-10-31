@@ -100,7 +100,7 @@ export const GroupForm = defineComponent(
                             } else {
                                 ElMessage.info(result.getMsg())
                             }
-                            emit('comfirm', result)
+                            emit('confirm', result)
                         })
                 } else {
                     api.add(state.value.formData as api.GroupFormRecord).then((result) => {
@@ -109,7 +109,7 @@ export const GroupForm = defineComponent(
                         } else {
                             ElMessage.info(result.getMsg())
                         }
-                        emit('comfirm', result)
+                        emit('confirm', result)
                     })
                 }
             }).catch((err) => {
@@ -217,12 +217,13 @@ export const GroupForm = defineComponent(
                 </el-form-item>
             </el-form>
         }
+    },
+    {
+        name: "group-form",
+        props: ["treeData", "data"],
+        emits: ["confirm", "update:data"]
     }
 )
-
-GroupForm.name = 'group-form'
-GroupForm.props = ['treeData', 'data']
-GroupForm.emits = ['confirm', 'update:data']
 
 
 const GroupPage = defineComponent(
@@ -541,7 +542,10 @@ const GroupPage = defineComponent(
             </el-container>
         }
 
+    },
+    {
+        name: "user-group"
     }
 )
-GroupPage.name = "user-group"
+
 export default GroupPage

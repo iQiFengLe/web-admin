@@ -5,10 +5,10 @@ import "./style.scss"
 
 const XPan = defineComponent(
     (props: {
-        active: string,
+        active: string
     }, { slots }) => {
 
-        
+
         const keys = ref<string[]>([])
 
         const index = ref(0)
@@ -44,9 +44,11 @@ const XPan = defineComponent(
             </div>
         }
 
+    },
+    {
+        name: "x-pan",
+        props: ['active']
     }
 )
-
-XPan.props = ['active']
 
 export default XPan
