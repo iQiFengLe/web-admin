@@ -1,0 +1,11 @@
+
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+
+    $bg-color: (
+        '1': #f5f5f5
+    )
+);
+
+@use 'sass:map';
+
+@use "element-plus/theme-chalk/src/common/var.scss" as *;

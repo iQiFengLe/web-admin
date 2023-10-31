@@ -1,0 +1,27 @@
+.x-drag{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    flex-wrap: nowrap;
+    display: flex;
+    align-items: center;
+
+    .scroll-arrow{
+        width: 30px;
+        text-align: center;
+        cursor: pointer;
+        box-sizing: border-box;
+        &.disable{
+            cursor: not-allowed;
+            color: #DCDFE6;
+        }
+    }
+
+    .x-drag-container{
+        display: inline-flex;
+        flex-wrap: nowrap;
+        width: calc(100% - 60px);
+        max-width: calc(100% - 60px);
+        overflow: hidden;
+    }
+}

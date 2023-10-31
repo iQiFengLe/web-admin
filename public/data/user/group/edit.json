@@ -1,0 +1,27 @@
+{
+    "code": "SUCCESS",
+    "msg": "OK",
+    "data": {
+        "id": 1,
+        "name": "混元境",
+        "remark": "",
+        "state": true,
+        "parentId": 0,
+        "weight": 1,
+        "maxUsers": 111,
+        "allocatedUsers": 1,
+        "roleIds": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ],
+        "createdAt": "2099-12-31 23:59:59",
+        "updatedAt": "2099-12-31 23:59:59"
+    }
+}

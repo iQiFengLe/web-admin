@@ -1,0 +1,134 @@
+@use 'sass:math';
+
+// 输出单位工具类
+// @include output-unit-util-class('ml', 'margin-left', 10, 0);
+// 输出 .ml-0{marginLeft: 0px !important;} ...
+@mixin output-unit-util-class($prefix, $rule, $max: 10, $min: 1, $unit: 'px') {
+    @for $i from $min through $max {
+        .#{$prefix}-#{$i} {
+            #{$rule}: #{$i}#{$unit} !important;
+        }
+    }
+}
+
+// 输出百分比工具类
+// @include output-percent-util-class(('h': 'height'), 100);
+// 输出 .h-100{height: 100% !important;} ...
+@mixin output-percent-util-class($maps, $percent) {
+
+    @each $prefix,
+    $val in $maps {
+        .#{$prefix}-#{$percent} {
+            #{$val}: #{$percent}#{"%"} !important;
+        }
+    }
+}
+
+// 输出缩写工具类
+// @include output-abridge-util-class(('ml': 'margin-left'), 'auto');
+// 输出 .ml-auto{margin-left: auto !important;} ...
+@mixin output-abridge-util-class($maps, $value) {
+
+    @each $prefix,
+    $val in $maps {
+        .#{$prefix}-#{$value} {
+            #{$val}: #{$value} !important;
+        }
+    }
+}
+
+// 输出百分比工具类
+@include output-percent-util-class(('h': 'height',
+        'w': 'width',
+        'max-h': 'max-height',
+        'min-h': 'min-height',
+        'max-w': 'max-width',
+        'min-w': 'min-width'
+    ), 100);
+
+// 输出外边距工具类
+@include output-abridge-util-class(('ml': 'margin-left'), 'auto');
+@include output-abridge-util-class(('mr': 'margin-right'), 'auto');
+@include output-abridge-util-class(('mt': 'margin-top'), 'auto');
+@include output-abridge-util-class(('mb': 'margin-bottom'), 'auto');
+@include output-unit-util-class('ml', 'margin-left', 10, 0);
+@include output-unit-util-class('mr', 'margin-right', 10, 0);
+@include output-unit-util-class('mt', 'margin-top', 10, 0);
+@include output-unit-util-class('mb', 'margin-bottom', 10, 0);
+
+// 输出内边距工具类
+@include output-abridge-util-class(('pl': 'padding-left'), 'auto');
+@include output-abridge-util-class(('pr': 'padding-right'), 'auto');
+@include output-abridge-util-class(('pt': 'padding-top'), 'auto');
+@include output-abridge-util-class(('pb': 'padding-bottom'), 'auto');
+@include output-unit-util-class('pl', 'padding-left', 10, 0);
+@include output-unit-util-class('pr', 'padding-right', 10, 0);
+@include output-unit-util-class('pt', 'padding-top', 10, 0);
+@include output-unit-util-class('pb', 'padding-bottom', 10, 0);
+
+// 输出定位工具类
+@include output-abridge-util-class(('top': 'top', 'left': 'left', 'right': 'right', 'bottom': 'bottom'), 0);
+
+
+// @keyframes scale-up-center {
+//     0% {
+//         transform: scale(0.5);
+//     }
+
+//     100% {
+//         transform: scale(1);
+//     }
+// }
+
+// .hover-scale {
+//     &:hover {
+//         // animation: scale-up-center 0.3s both;
+//     }
+// }
+
+.btn-block {
+    display: inline-block;
+    margin-left: 12px;
+}
+.overflow-hidden{
+    overflow: hidden !important;
+}
+
+
+.p-a {
+    position: absolute !important;
+}
+
+.p-r {
+    position: relative !important;
+}
+
+.flex-nowarp {
+    flex-wrap: nowrap;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.d-inline-flex {
+    display: inline-flex !important;
+}
+
+.align-items-center {
+    align-items: center !important;
+}
+
+.justify-content-center {
+    justify-content: center !important;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+@for $i from 1 through 10 {
+    .gap-#{$i} {
+        gap: #{$i*2}px;
+    }
+}

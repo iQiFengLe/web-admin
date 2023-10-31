@@ -1,0 +1,40 @@
+@use 'sass:map';
+@use "@/styles/vars" as *;
+
+
+.s-table {
+    background-color: map.get($bg-color, '');
+
+    .s-table-footer,
+    .s-table-header {
+        padding: 13px 15px;
+    }
+
+    .s-table-header-btns {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .s-table-footer {
+        .el-pagination {
+            .el-pagination__sizes {
+                margin-left: 0;
+                margin-right: auto;
+            }
+        }
+    }
+
+    .s-table-col-controller {
+        display: inline-block;
+        margin-left: auto;
+        margin-right: 0;
+    }
+}
+
+.s-table-col-controller-tree {
+    .el-tree-node__content{
+        padding-right: 24px;
+        height: 30px;
+    }
+}

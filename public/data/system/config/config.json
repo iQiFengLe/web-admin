@@ -1,0 +1,20 @@
+{
+    "code": "SUCCESS",
+    "msg": "OK",
+    "data": {
+        "basic": {
+            "name": "境",
+            "state": 1,
+            "stateDesc": "",
+            "recordNumber": ""
+        },
+        "mail": {
+            "SMTPServer": "mail.qq.com",
+            "SMTPPort": 465,
+            "SMTPUser": "SMTP-User",
+            "SMTPPwd": "SMTP-Password",
+            "SMTPVerifyMode": "SSL",
+            "SMTPSender": "666666@qq.com"
+        }
+    }
+}

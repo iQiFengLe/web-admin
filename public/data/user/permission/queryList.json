@@ -1,0 +1,44 @@
+{
+    "code": "SUCCESS",
+    "msg": "OK",
+    "data": {
+        "total": 3,
+        "current": 1,
+        "pageSize": 10,
+        "records": [
+            {
+                "id": 1,
+                "name": "资源1",
+                "path": "资源路径",
+                "method": "POST",
+                "code": "123",
+                "remark": "资源备注",
+                "allowAnonymousAccess": true,
+                "state": true,
+                "moduleName": "/"
+            },
+            {
+                "id": 2,
+                "name": "资源2",
+                "path": "path-2",
+                "method": "POST",
+                "code": "21",
+                "remark": "资源备注2",
+                "allowAnonymousAccess": true,
+                "state": true,
+                "moduleName": "/shop"
+            },
+            {
+                "id": 3,
+                "name": "资源3",
+                "path": "path-3",
+                "method": "GET",
+                "code": "32",
+                "remark": "资源备注3",
+                "allowAnonymousAccess": true,
+                "state": true,
+                "moduleName": "/store"
+            }
+        ]
+    }
+}

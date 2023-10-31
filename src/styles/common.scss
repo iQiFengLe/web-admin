@@ -1,0 +1,84 @@
+@use 'sass:map';
+
+@use "./vars" as *;
+
+
+html,
+body,
+#app {
+    height: 100%;
+    font-family: PingFang SC, Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    position: relative;
+    background-color: #f5f5f5;
+}
+
+.table-operate {
+    padding: 4px 5px;
+    height: auto;
+}
+
+
+.page-item {
+    padding: 13px 15px;
+    background-color: map.get($bg-color, '');
+    box-sizing: border-box !important;
+}
+.box-shadow{
+    box-shadow: map.get($box-shadow, 'light');
+}
+
+.page-header {
+    margin-bottom: 15px;
+}
+
+a {
+    font-weight: 500;
+    color: $color-primary;
+    text-decoration: inherit;
+
+    &:hover,
+    &:focus {
+        color: map.get($colors, 'primary', 'light-3');
+    }
+}
+
+.bg-color {
+    background-color: map.get($bg-color, '');
+}
+
+.text-color-white {
+    color: white !important;
+}
+
+.separate-page {
+    height: 100%;
+
+    .separate-container {
+        display: flex;
+        gap: 16px;
+        flex-direction: row;
+        height: 100%;
+    }
+}
+
+.border-right{
+    border-right: 1px solid map.get($border-color, 'light');
+}
+
+
+// 操作行
+.action-line{
+    height: 60px;
+    box-sizing: border-box;
+}
+// 高度无操作行行高
+.h-no-action-line{
+    box-sizing: border-box;
+    height: calc(100% - 60px);
+}

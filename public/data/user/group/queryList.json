@@ -1,0 +1,66 @@
+{
+    "code": "SUCCESS",
+    "msg": "OK",
+    "data": [
+        {
+            "id": 1,
+            "name": "鸿蒙界",
+            "remark": "",
+            "parentId": 0,
+            "weight": 3,
+            "state": true,
+            "createdAt": "2020-12-20 20:20:20",
+            "updatedAt": "2022-12-20 20:20:20"
+        },
+        {
+            "id": 2,
+            "name": "混沌界",
+            "remark": "",
+            "parentId": 0,
+            "weight": 4,
+            "state": true,
+            "createdAt": "2020-12-20 20:20:20",
+            "updatedAt": "2022-12-20 20:20:20"
+        },
+        {
+            "id": 3,
+            "name": "大世界",
+            "remark": "",
+            "parentId": 0,
+            "weight": 5,
+            "state": true,
+            "createdAt": "2020-12-20 20:20:20",
+            "updatedAt": "2022-12-20 20:20:20"
+        },
+        {
+            "id": 4,
+            "name": "大千世界",
+            "remark": "",
+            "parentId": 0,
+            "weight": 6,
+            "state": true,
+            "createdAt": "2020-12-20 20:20:20",
+            "updatedAt": "2022-12-20 20:20:20"
+        },
+        {
+            "id": 5,
+            "name": "中千世界",
+            "remark": "",
+            "parentId": 0,
+            "weight": 7,
+            "state": true,
+            "createdAt": "2020-12-20 20:20:20",
+            "updatedAt": "2022-12-20 20:20:20"
+        },
+        {
+            "id": 6,
+            "name": "小千世界",
+            "remark": "",
+            "parentId": 0,
+            "weight": 8,
+            "state": true,
+            "createdAt": "2020-12-20 20:20:20",
+            "updatedAt": "2022-12-20 20:20:20"
+        }
+    ]
+}

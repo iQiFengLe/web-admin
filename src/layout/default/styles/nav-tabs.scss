@@ -1,0 +1,60 @@
+@use 'sass:map';
+@use "@/styles/vars" as *;
+
+
+.nav-tabs {
+
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: transparent;
+    position: relative;
+    height: 40px;
+
+    .nav-tabs-item-active{
+        position: absolute;
+        z-index: 1;
+        height: 40px;
+        transition: all 0.3s ease-in-out;
+        background-color: map.get($bg-color, '');
+        box-shadow: map.get($box-shadow, 'light');
+        border-radius: 5px;
+
+    }
+
+    .nav-tabs-item {
+        position: relative;
+        z-index: 2;
+        display: inline-flex;
+        align-items: center;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: all 0.3s ease;
+        background-color: transparent;
+
+        &:last-child{
+            margin-right: 0;
+        }
+
+        &:hover{
+            opacity: 1;
+        }
+
+        .nav-tabs-item-close {
+            background-color: transparent;
+            transition: all 0.3s ease;
+            margin-left: 5px;
+            padding: 2px;
+            font-size: 12px;
+            font-weight: 300;
+            border-radius: 50%;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $color-primary;
+            }
+        }
+    }
+}

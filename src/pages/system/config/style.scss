@@ -1,0 +1,22 @@
+@use 'sass:map';
+@use "@/styles/vars" as *;
+
+
+.system-config-tabs {
+
+    box-shadow: map.get($box-shadow, 'light');
+
+    border: none;
+
+    .el-tabs__header {
+        background-color: map.get($bg-color, '1');
+        border: none;
+
+        .el-tabs__item {
+            border: none;
+            &.is-active {
+                background-color: map.get($bg-color, '');
+            }
+        }
+    }
+}

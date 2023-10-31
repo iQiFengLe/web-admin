@@ -1,0 +1,17 @@
+.transition-pan-container {
+    width: 100%;
+    overflow: hidden;
+    
+    .transition-x-pan {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-shrink: 1;
+        transition: all 0.3s ease;
+        transform: translateX(0);
+
+        >* {
+            min-width: 100% !important;
+            max-width: 100% !important;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+@use 'sass:map';
+@use "@/styles/vars" as *;
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    background-color: map.get($bg-color, '');
+    box-shadow: map.get($box-shadow, 'light');
+    flex-wrap: nowrap;
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+
+    .nav-menu-item {
+        transition: all 0.3s ease;
+        background-color: transparent;
+        display: inline-flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 0 10px;
+        height: 100%;
+        line-height: 50px;
+        cursor: pointer;
+        min-width: 40px;
+        box-sizing: border-box;
+
+        &:first-child{
+            border-radius: 5px 0 0 5px;
+        }
+        &:last-child{
+            border-radius: 0 5px 5px 0;
+        }
+
+        .m-icon {
+            font-size: 18px;
+        }
+
+        &:hover,
+        .nav-menu-item-active {
+            background-color: map.get($bg-color, 'page');
+        }
+    }
+
+}

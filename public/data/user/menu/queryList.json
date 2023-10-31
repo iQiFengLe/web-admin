@@ -1,0 +1,146 @@
+{
+    "code": "SUCCESS",
+    "msg": "OK",
+    "data": [
+        {
+            "id": 1,
+            "name": "系统管理",
+            "type": "nav",
+            "remark": "菜单规则备注",
+            "icon": "fa fa-ic",
+            "parentId": 0,
+            "path": "",
+            "weight": 65,
+            "mark": "system-manager",
+            "depth": 1,
+            "state": true,
+            "data": {},
+            "createdAt": "2020-12-20 20:20:20",
+            "updatedAt": "2022-12-20 20:20:20"
+        },
+        {
+            "id": 2,
+            "name": "角色管理",
+            "type": "nav",
+            "remark": "菜单规则备注",
+            "icon": "fa fa-role",
+            "parentId": 1,
+            "path": "",
+            "weight": 6,
+            "mark": "system-manager-role",
+            "depth": 2,
+            "state": true,
+            "data": {},
+            "createdAt": "2020-12-20 20:20:20",
+            "updatedAt": "2022-12-20 20:20:20"
+        },
+        {
+            "id": 3,
+            "name": "菜单规则管理",
+            "type": "nav",
+            "remark": "菜单规则备注",
+            "icon": "fa fa-ic",
+            "parentId": 1,
+            "path": "",
+            "weight": 453,
+            "mark": "system-manager-menu",
+            "depth": 2,
+            "state": true,
+            "data": {},
+            "createdAt": "2020-12-20 20:20:20",
+            "updatedAt": "2022-12-20 20:20:20"
+        },
+        {
+            "id": 4,
+            "name": "控制台",
+            "type": "nav",
+            "remark": "菜单规则备注",
+            "icon": "fa fa-dash",
+            "parentId": 0,
+            "path": "",
+            "weight": 62,
+            "mark": "dash",
+            "depth": 1,
+            "state": true,
+            "data": {
+                "a": 1,
+                "b": 2,
+                "da": [1, 4, 5, 6],
+                "pa": {
+                    "1": 222,
+                    "ps": {},
+                    "nos": {
+                        "px": 1,
+                        "nop": [10,9]
+                    }
+                },
+                "pac": {
+                    "1": 222,
+                    "ps": {},
+                    "nos": {
+                        "px": 1,
+                        "nop": [10,9]
+                    }
+                },
+                "pad": {
+                    "1": 222,
+                    "ps": {},
+                    "nos": {
+                        "px": 1,
+                        "nop": [10,9]
+                    }
+                }
+            },
+            "createdAt": "2020-12-20 20:20:20",
+            "updatedAt": "2022-12-20 20:20:20"
+        },
+        {
+            "id": 5,
+            "name": "仪表盘",
+            "type": "nav",
+            "remark": "菜单规则备注",
+            "icon": "fa fa-dash",
+            "parentId": 4,
+            "path": "",
+            "weight": 3,
+            "mark": "dash",
+            "depth": 1,
+            "state": true,
+            "data": {},
+            "createdAt": "2020-12-20 20:20:20",
+            "updatedAt": "2022-12-20 20:20:20"
+        },
+        {
+            "id": 6,
+            "name": "监视器",
+            "type": "nav",
+            "remark": "菜单规则备注",
+            "icon": "fa fa-dash",
+            "parentId": 4,
+            "path": "",
+            "weight": 3,
+            "mark": "dash",
+            "depth": 1,
+            "state": true,
+            "data": {},
+            "createdAt": "2020-12-20 20:20:20",
+            "updatedAt": "2022-12-20 20:20:20"
+        },
+        {
+            "id": 7,
+            "name": "工作台",
+            "type": "nav",
+            "remark": "菜单规则备注",
+            "icon": "fa fa-dash",
+            "parentId": 5,
+            "path": "",
+            "weight": 3,
+            "mark": "dash",
+            "depth": 1,
+            "state": true,
+            "data": {},
+            "createdAt": "2020-12-20 20:20:20",
+            "updatedAt": "2022-12-20 20:20:20"
+        }
+    ]
+}
